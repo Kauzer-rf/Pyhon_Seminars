@@ -2,10 +2,9 @@
 # Для N=6: [4, 7, 10, 13, 16, 19]
 
 n = int(input('Введите натруальное число N: '))
-elem = 1
 list = []
-for i in range(n):
-    elem += 3
+for i in range(1, n+1):
+    elem = 3*i + 1
     list.append(elem)
 print(list)
 
