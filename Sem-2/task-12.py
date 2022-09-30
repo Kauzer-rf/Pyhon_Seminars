@@ -8,3 +8,6 @@ for i in range(n):
     elem += 3
     list.append(elem)
 print(list)
+
+# Сахарный метод. Быстрое задание функций и переменных
+# n = [(-3)**i for i in range(n)]
