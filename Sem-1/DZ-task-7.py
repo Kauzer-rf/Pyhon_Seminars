@@ -20,3 +20,10 @@ def TrueOrFalse():
 
 print('Результат: ')
 result = TrueOrFalse()
+
+# Альтернативное решение
+# for X in range(2):
+#         for Y in range(2):
+#             for Z in range(2):
+#                 f = not(x or y or z) == (not(x) and not(y) and not(z))
+#                 print(x,y,z,f)
