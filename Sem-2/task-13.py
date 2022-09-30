@@ -4,3 +4,4 @@ import string
 string_1 = input('Введите строку 1: ')
 string_2 = input('Введите строку 2: ')
 print(string_1.count (string_2))
+

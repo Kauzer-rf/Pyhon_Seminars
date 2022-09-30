@@ -9,5 +9,6 @@ for i in range(n):
     list.append(elem)
 print(list)
 
+
 # Сахарный метод. Быстрое задание функций и переменных
-# n = [(-3)**i for i in range(n)]
+# n = [3*i+1 for i in range(1, n+1)]
