@@ -39,10 +39,10 @@ index_2 = 0
 index_3 = 0
 for i in list:
     if i == num1:
-        index_1 = i
+        index_1 = list[i]
     elif i == num2:
-        index_2 = i
+        index_2 = list[i]
     elif i == num3:
-        index_3 = i
+        index_3 = list[i]
 multiplay = index_1*index_2*index_3
 print(f'Произведение чисел с индексами {num1}, {num2}, {num3} = {index_1}*{index_2}*{index_3} = {multiplay} ')
