@@ -37,7 +37,7 @@ data.close()
 index_1 = 0
 index_2 = 0
 index_3 = 0
-for i in list:
+for i in range(len(list)):
     if i == num1:
         index_1 = list[i]
     elif i == num2:
