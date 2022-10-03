@@ -12,3 +12,12 @@ def multiplication(num):
 N = int(input('Введите целое положительное число: '))
 multipli = multiplication(N)
 print(f'Результат перемножения: {multipli}')
+
+# 2ое решение
+# N = int(input('Введите целое положительное число: '))
+# value = 1
+# a = []
+# for i in range(1, N+1):
+#     value *= i
+#     a.append(value)
+# print(a)
