@@ -5,3 +5,18 @@
 # •	список: ["йцу", "фыв", "ячс", "цук", "йцукен"], ищем: "йцу", ответ: -1
 # •	список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
 # •	список: [], ищем: "123", ответ: -1
+
+
+str = input ('Enter string: ')
+my_list = ['er567', 'iu5', 'tru456t', 'ffg567']
+
+length = len(my_list)
+count = 0
+
+for i in (my_list):
+    if i == str and count == 0:
+        count += 1
+    if i == str and count == 1
+        
+        break
+print(Flag)
