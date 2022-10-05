@@ -7,16 +7,16 @@
 # •	список: [], ищем: "123", ответ: -1
 
 
-str = input ('Enter string: ')
-my_list = ['er567', 'iu5', 'tru456t', 'ffg567']
+find = 'qwe'
+my_list = ["qwe", "asd", "zxc", "qwe", "ertqwe"]
 
-length = len(my_list)
-count = 0
+def second_in(list, find):
+    count = 0
+    for i in range (len(list)):
+        if list[i] == find:
+            count +=1
+            if count == 2:
+                return i
+    return -1
 
-for i in (my_list):
-    if i == str and count == 0:
-        count += 1
-    if i == str and count == 1
-        
-        break
-print(Flag)
+print(second_in(my_list, find))
