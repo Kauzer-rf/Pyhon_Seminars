@@ -18,6 +18,12 @@
 
 #Решение через функцию шафл
 import random
+import os
+
+def cls():
+    os.system('cls'if os.name == 'nt' else 'clear')
+cls()
+
 n = int(input('Enter razmer spiska: '))
 default_list = list([random.randint(10, 99) for i in range(0, n)])
 print(f'Список до перемешиваения: \t{default_list}')
