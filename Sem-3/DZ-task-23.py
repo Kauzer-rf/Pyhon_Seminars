@@ -2,8 +2,12 @@
 # Пример:
 # o	[2, 3, 4, 5, 6] => [12, 15, 16];
 # o	[2, 3, 5, 6] => [12, 15]
+import os
+def cls():
+    os.system('cls'if os.name == 'nt' else 'clear')
+cls()
 
-def multipli_item(a: list):
+def multiply_item(a: list):
     b = []
     if len(a) % 2 != 0:
         for i in range(int(len(a) / 2)):
@@ -15,7 +19,7 @@ def multipli_item(a: list):
     return b
 
 
-list_ = [2, 3, 4, 5, 6]
+list_1 = [2, 3, 4, 5, 6]
 list_2 = [2, 3, 5, 6]
-print(multipli_item(list_))
-print(multipli_item(list_2))
+print(f'Произведение списка №1 {list_1} => {multiply_item(list_1)}')
+print(f'Произведение списка №2 {list_2} => {multiply_item(list_2)}')

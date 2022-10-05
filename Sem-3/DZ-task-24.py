@@ -3,7 +3,10 @@
 # o	[1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
 from typing import List
-
+import os
+def cls():
+    os.system('cls'if os.name == 'nt' else 'clear')
+cls()
 
 def sort_fractional_part(a: List):
     for i in range(len(a)):
@@ -24,11 +27,12 @@ def get_difference_max_min_fractional(a: List):
         if type(item) == float:
             min = item
             break
+    print(f'Максимальное значение: {max}')
+    print(f'Миннимальное значение: {min}')
     difference = max - min
     return difference
 
 
 list_ = [1.1, 1.2, 3.1, 5, 10.01]
-print(f'{list_}\n')
-print(f'\
-    Разница между максимальным и минимальным значением дробной части элементов => {get_difference_max_min_fractional(sort_fractional_part(list_))}')
+print(f'Дан список: {list_}\n')
+print(f'Разница между максимальным и минимальным значением дробной части элементов => {get_difference_max_min_fractional(sort_fractional_part(list_))}')

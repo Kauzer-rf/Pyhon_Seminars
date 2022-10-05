@@ -4,8 +4,12 @@
 # o	3 -> 11
 # o	2 -> 10
 
+import os
+def cls():
+    os.system('cls'if os.name == 'nt' else 'clear')
+cls()
 
-def get_bin_number(a: int):
+def get_number(a: int):
     list_ = []
     while a >= 1:
         list_.append(a % 2)
@@ -18,4 +22,4 @@ def get_bin_number(a: int):
 
 
 num = int(input('Введите целое число: '))
-print('bin ->',get_bin_number(num))
+print('Двоичное число =>',get_number(num))

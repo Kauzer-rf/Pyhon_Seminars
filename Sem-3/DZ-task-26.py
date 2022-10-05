@@ -2,6 +2,10 @@
 # Пример:
 # o	для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21] 
 
+import os
+def cls():
+    os.system('cls'if os.name == 'nt' else 'clear')
+cls()
 
 def get_fibonachi(n):
     if n in (1, 2):
@@ -23,4 +27,4 @@ def get_list_fibonachi(n):
 
 
 num = int(input('Введите целое положительное число: '))
-print(f'Получаем последовательность Фиббоначи: {get_list_fibonachi(num)}')
+print(f'Последовательность Фиббоначи: {get_list_fibonachi(num)}')
