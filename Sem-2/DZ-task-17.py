@@ -15,34 +15,14 @@ for i in range(-N, N+1):
     list.append(i)
 print(f'Полученный список: {list}')
 
-num1 = random.randrange(len(list))
-num2 = random.randrange(len(list))
-num3 = random.randrange(len(list))
-
-print(
-    f'Сгенеририровны случайные позиции и записаны в file.txt: {num1}, {num2}, {num3}.')
-
 with open('file.txt', 'w') as data:
-    data.write(f'{num1}\n')
-    data.write(f'{num2}\n')
-    data.write(f'{num3}\n')
+    count_number = random.randrange(1, N)
+    for i in range(0, count_number):
+        data.writelines(str(random.randrange(0, N+1)) + '\n')
 
-path = 'file.txt'
-data = open(path, 'r')
-for line in data:
-    print(f'Прочтен из file.txt следующиq индекс: {line}')
-data.close()
-
-
-index_1 = 0
-index_2 = 0
-index_3 = 0
-for i in range(len(list)):
-    if i == num1:
-        index_1 = list[i]
-    elif i == num2:
-        index_2 = list[i]
-    elif i == num3:
-        index_3 = list[i]
-multiplay = index_1*index_2*index_3
-print(f'Произведение чисел с индексами {num1}, {num2}, {num3} = {index_1}*{index_2}*{index_3} = {multiplay} ')
+result = 1
+with open('file.txt', 'r') as data:
+    for line in data:
+        print(f'Прочтен из file.txt следующий индекс: {line}')
+        result *= list[int(line)]
+print(f'Произведение чисел = {result}')
