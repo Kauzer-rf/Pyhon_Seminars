@@ -26,3 +26,10 @@ def get_sum(a):
 list_ = [2, 3, 5, 9, 3]
 print(f' На нечётных позициях элементы {select_index(list_)}')
 print(f' Сумма нечётных элементов: {get_sum(select_index(list_))}')
+
+# 2nd way
+# spisok = [2, 3, 5, 9, 3]
+# sum = 0
+# for i in range(1,len(spisok,2)):
+#     sum +=spisok[i]
+# print(sum)
