@@ -44,23 +44,23 @@ cls()
 #     f'Разница между максимальным и минимальным значением дробной части элементов => {get_difference_max_min_fractional(sort_fractional_part(list_))}')
 
 
-# 2nd way
-nums = [1.1, 1.2, 3.1, 5, 10.01]
-for i in range(len(nums)):
-    nums[i] = nums[i] - round(nums[i])
-if 0 in nums:
-    nums.remove(0)
-print(
-    f'Разница между максимальным и минимальным значением дробной части элементов => {round(max(nums) - min(nums), 2)}')
+# 2nd way (error)
+# nums = [1.1, 1.2, 3.1, 5, 10.01]
+# for i in range(len(nums)):
+#     nums[i] = nums[i] - round(nums[i])
+# if 0 in nums:
+#     nums.remove(0)
+# print(
+#     f'Разница между максимальным и минимальным значением дробной части элементов => {round(max(nums) - min(nums), 2)}')
 
 
-# 3rd way
+# 3rd way (correct)
 a = [1.1, 1.2, 3.1, 5, 10.01]
 b = []
 for i in a:
     if i % 1 != 0:
         b.append(i % 1)
-        b.sort()
+b.sort()
 
 print(
     f'Разница между максимальным и минимальным значением дробной части элементов равна: {b[len(b)-1]-b[0]:.5f}')
