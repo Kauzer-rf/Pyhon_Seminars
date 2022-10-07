@@ -4,6 +4,7 @@
 
 from typing import List
 import os
+from unicodedata import decimal
 
 
 def cls():
@@ -55,12 +56,14 @@ cls()
 
 
 # 3rd way (correct)
+
 a = [1.1, 1.2, 3.1, 5, 10.01]
 b = []
 for i in a:
     if i % 1 != 0:
         b.append(i % 1)
 b.sort()
+print(b)
 
 print(
-    f'Разница между максимальным и минимальным значением дробной части элементов равна: {b[len(b)-1]-b[0]:.5f}')
+    f'Разница между максимальным и минимальным значением дробной части элементов равна: {round((b[-1]-b[0]),3)}')
