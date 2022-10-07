@@ -33,3 +33,7 @@ print(f' Сумма нечётных элементов: {get_sum(select_index(l
 # for i in range(1,len(spisok,2)):
 #     sum +=spisok[i]
 # print(sum)
+
+# 3rd way
+# list=[2,3,5,9,3][1::2]
+# print(sum(list))
