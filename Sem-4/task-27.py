@@ -15,5 +15,6 @@ bet = []
 for i in b:
     bet.append(int(i))
 
-bet.sort()
-print(bet[-1], bet[0])
+# bet.sort()
+# print(bet[-1], bet[0])
+print(max(bet), min(bet))
