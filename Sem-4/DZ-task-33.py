@@ -4,3 +4,11 @@
 # 2*x**2 + 4*x + 5 = 0
 # или
 # 2*x^2 + 4*x + 5 = 0
+import os
+
+
+def cls():
+    os.system('cls'if os.name == 'nt' else 'clear')
+
+
+cls()
