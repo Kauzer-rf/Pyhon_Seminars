@@ -1,7 +1,7 @@
 """
 Как посчитать строку как числа (2+2)*3
 """
-s = '(2+2)*3'
+
 
 def parse(s):
     result = []
@@ -11,17 +11,52 @@ def parse(s):
             digit += symb
         elif symb in ['(', ')']:
             if digit:
-                result.apped(float(digit))
+                result.append(float(digit))
                 digit = ''
             result.append(symb)
         else:
             if digit:
-                result.apped(float(digit))
+                result.append(float(digit))
             digit = ''
             result.append(symb)
     else:
         if digit:
-           result.apped(float(digit))
-    return result 
+            result.append(float(digit))
+    return result
 
-    print(parse(s))
+
+def calc(lst):
+    result = 0.0
+    while '*' in lst:
+        index = lst.index('*')
+        result = lst[index - 1] * [index + 1]
+        lst = lst[:index - 1] + [result] + lst[:index + 2]
+    while '/' in lst:
+        index = lst.index('/')
+        result = lst[index - 1] / [index + 1]
+        lst = lst[:index - 1] + [result] + lst[:index + 2]
+    while '+' in lst:
+        index = lst.index('+')
+        result = lst[index - 1] + [index + 1]
+        lst = lst[:index - 1] + [result] + lst[:index + 2]
+    while '-' in lst:
+        index = lst.index('-')
+        result = lst[index - 1] - [index + 1]
+        lst = lst[:index - 1] + [result] + lst[:index + 2]
+    return result
+
+
+def brackets(lst):
+    while '(' in lst:
+        opening = lst.index('(')
+        closing = lst.index(')')
+        lst = lst[:opening] + \
+            [calc(lst[opening + 1:closing])] + lst[closing + 1:]
+    return lst
+
+
+s = '(1+2)*3'
+result = parse(s)
+result = brackets(result)
+
+print(calc(result))
