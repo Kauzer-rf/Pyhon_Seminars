@@ -15,3 +15,6 @@ def sort(lst):
     s.sort()
     return (s)
 print(sort(lst))
+
+# solution 2
+# list(filter(lambda i: col.count(i) == 1, col)) 
