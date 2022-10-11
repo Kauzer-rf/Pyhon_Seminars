@@ -2,10 +2,7 @@
 Напишите программу, которая удаляет 'абв' из строки.
 """
 
-my_text = 'Прочитал абв новоабвсти иабв удивился.'
-def del_words(my_text):
-    my_text = list(filter(lambda x: 'абв' not in x, my_text.split()))
-    return " ".join(my_text)
-
-my_text = del_words(my_text)
-print(my_text)
+my_text = 'Прочитал абв новости абв и абв удивился.'
+find_text = "абв"
+lst = [i for i in my_text.split() if find_text not in i]
+print(f'Результат: {" ".join(lst)}')
