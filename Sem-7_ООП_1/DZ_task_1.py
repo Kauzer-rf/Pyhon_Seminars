@@ -15,22 +15,30 @@
 import time
 
 
+# class TrafficLight:
+#     __color = 'Red'
+
+#     def running(self, __color):
+#         self.__color = 'Red'
+#         print(self.__color)
+#         time.sleep(7)
+
+#         self.__color = 'Yellow'
+#         print(self.__color)
+#         time.sleep(2)
+
+#         self.__color = 'Green'
+#         print(self.__color)
+#         time.sleep(5)
+
+# a = TrafficLight()
+# a.running()
+
 class TrafficLight:
     __color = 'Red'
 
-    # def __running__(self):
-    #     self.__color = 'Red'
-    #     time.sleep(7)
-
-    #     self.__color = 'Yellow'
-    #     time.sleep(2)
-
-    #     self.__color = 'Green'
-    #     time.sleep(5)
-
-    
     def __running__(self): # Просто вывод текста цветов, имитирующий светофор. Изначально хотел поработать с
-                           # параметром __color (строки 21-29), но выходила ошибка.
+                           # параметром __color (строки 21-35), но выходила ошибка.
         print('Red')
         time.sleep(7)
 
@@ -43,4 +51,3 @@ class TrafficLight:
 
 a = TrafficLight()
 a.__running__()
-# print(a.__color)
