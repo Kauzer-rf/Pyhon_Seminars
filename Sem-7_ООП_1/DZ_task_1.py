@@ -36,7 +36,7 @@ import time
 
 class TrafficLight:
     def __init__(self):
-        __color = 'Red'
+        self.__color = 'Red'
 
     
     def __running__(self): # Просто вывод текста цветов, имитирующий светофор. Изначально хотел поработать с

@@ -14,17 +14,15 @@ length (длина в метрах), width (ширина в метрах).
 
 
 class Road:
+    default_mass = 25
+    _length = int(input('Введите длину дороги в метрах: '))
+    _width = int(input('Введите ширину дороги в метрах: '))
 
-    def __init__(self):
-        _length = int(input('Введите длину дороги в метрах: '))
-        _width = int(input('Введите ширину дороги в метрах: '))
-        default_mass = 25
-
-    def Get_Mass(self, _length, _width, default_mass):
-        self.find_mass = _length * _width * default_mass * 0.05
+    def get_mass(self):
+        self.find_mass = self._length * self._width * self.default_mass * 0.05
         print(
             f'На дорогу с указанными параметрами понадобится: {self.find_mass} кг асфальта')
 
 
 a = Road()
-a.Get_Mass()
+a.get_mass()
