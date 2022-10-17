@@ -27,7 +27,10 @@ class TrafficLight:
 
     #     self.__color = 'Green'
     #     time.sleep(5)
-    def __running__(self):
+
+    
+    def __running__(self): # Просто вывод текста цветов, имитирующий светофор. Изначально хотел поработать с
+                           # параметром __color (строки 21-29), но выходила ошибка.
         print('Red')
         time.sleep(7)
 
@@ -36,6 +39,7 @@ class TrafficLight:
 
         print('Green')
         time.sleep(5)
+
 
 a = TrafficLight()
 a.__running__()
