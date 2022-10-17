@@ -35,8 +35,10 @@ import time
 # a.running()
 
 class TrafficLight:
-    __color = 'Red'
+    def __init__(self):
+        __color = 'Red'
 
+    
     def __running__(self): # Просто вывод текста цветов, имитирующий светофор. Изначально хотел поработать с
                            # параметром __color (строки 21-35), но выходила ошибка.
         print('Red')
