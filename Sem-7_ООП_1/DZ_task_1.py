@@ -16,19 +16,12 @@ import time
 
 
 class TrafficLight:
+    __color = [('Red', 7), ('Yellow', 2), ('Green', 5)]
 
     def running(self):
-        self.__color = 'Red'
-        print(self.__color)
-        time.sleep(7)
-
-        self.__color = 'Yellow'
-        print(self.__color)
-        time.sleep(2)
-
-        self.__color = 'Green'
-        print(self.__color)
-        time.sleep(5)
+        for i in self.__color:
+            print(i[0])
+            time.sleep(i[1])
 
 
 a = TrafficLight()
