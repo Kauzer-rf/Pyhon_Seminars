@@ -25,6 +25,7 @@ class Worker:
 
 
 class Position(Worker):
+    pass
     def __init__(self, name, surname, _incom):
         super().__init__(name, surname, _incom)
 
@@ -36,7 +37,7 @@ class Position(Worker):
         return f'ЗП составляет: {self.total_cash} рублей, с учетом премии.'
 
 
-a = Position()
+obj = Position()
 
-a.get_full_name()
-a.get_total_income()
+obj.get_full_name()
+obj.get_total_income()
