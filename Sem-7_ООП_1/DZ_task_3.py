@@ -11,33 +11,37 @@
 П.С. попытайтесь добить вывода информации о сотруднике также через перегрузку __str__
 __str__(self) - вызывается функциями str, print и format. Возвращает строковое представление объекта.
 """
+import os
 
+
+def cls():
+    os.system('cls'if os.name == 'nt' else 'clear')
+
+
+cls()
 
 class Worker:
-    def __init__(self):
-        self.name = input('Введите имя сотрудника: ')
-        self.surname = input('Введите фамилию сотрудника: ')
-        self.position = None
-        self._incom = {
-            "wage": 30000,
-            "bonus": 10000,
-        }
+    # _incom = {"wage": 30000, "bonus": 10000}
+
+    def __init__(self, name, surname, position, _incom):
+            self.name = name  
+            self.surname = surname  
+            self.position = position
+            self._incom = _incom  
 
 
 class Position(Worker):
-    pass
-    def __init__(self, name, surname, _incom):
-        super().__init__(name, surname, _incom)
 
-    def get_full_name(self, name, surname):
-        return f'Имя сотрудника: {name}, его фамилия: {surname}'
+    # def get_full_name(self):
+    #     print(f'{self.name} {self.surname}')
 
-    def get_total_income(self, _incom):
-        self.total_cash = _incom[0] + _incom[1]
-        return f'ЗП составляет: {self.total_cash} рублей, с учетом премии.'
+    # def get_total_income(self, _incom):
+    #     self.total_cash = _incom[0] + _incom[1]
+
+    def __str__(self):
+        return f'Сотрудник: {self.name} {self.surname} \nДолжность: {self.position} \nЗарплата: {self._incom}'
 
 
-obj = Position()
 
-obj.get_full_name()
-obj.get_total_income()
+a = Position('Andrey','Fedotov', 'Пекарь', '40000')
+print(a)

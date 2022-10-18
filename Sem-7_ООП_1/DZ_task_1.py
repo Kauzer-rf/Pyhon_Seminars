@@ -13,7 +13,14 @@
 """
 
 import time
+import os
 
+
+def cls():
+    os.system('cls'if os.name == 'nt' else 'clear')
+
+
+cls()
 
 class TrafficLight:
     __color = [('Red', 7), ('Yellow', 2), ('Green', 5)]

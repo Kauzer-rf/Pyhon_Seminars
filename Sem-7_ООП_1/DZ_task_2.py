@@ -11,7 +11,14 @@ length (длина в метрах), width (ширина в метрах).
 Проверить работу метода.
 Например: 20м*5000м*25кг*0.05м = 125000 кг = 125 т
 """
+import os
 
+
+def cls():
+    os.system('cls'if os.name == 'nt' else 'clear')
+
+
+cls()
 
 class Road:
     default_mass = 25
