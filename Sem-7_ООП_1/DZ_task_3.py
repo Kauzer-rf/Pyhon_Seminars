@@ -15,9 +15,9 @@ __str__(self) - вызывается функциями str, print и format. В
 
 class Worker:
     def __init__(self):
-        self.name = ''
-        self.surname = ''
-        self.position = ''
+        self.name = input('Введите имя сотрудника: ')
+        self.surname = input('Введите фамилию сотрудника: ')
+        self.position = None
         self._incom = {
             "wage": 30000,
             "bonus": 10000,
@@ -25,17 +25,16 @@ class Worker:
 
 
 class Position(Worker):
-    def __init__(self, _incom):
-        super().__init__(_incom)
+    def __init__(self, name, surname, _incom):
+        super().__init__(name, surname, _incom)
 
-    
-    def get_full_name(self):
-        self.name = input('Введите имя сотрудника: ')
-        self.surname = input('Введите фамилию сотрудника: ')
+    def get_full_name(self, name, surname):
+        return f'Имя сотрудника: {name}, его фамилия: {surname}'
 
-    def get_total_income(self):
-        self.total_cash = self._incom[0] + self._incom[1]
-        print(self.total_cash)
+    def get_total_income(self, _incom):
+        self.total_cash = _incom[0] + _incom[1]
+        return f'ЗП составляет: {self.total_cash} рублей, с учетом премии.'
+
 
 a = Position()
 
