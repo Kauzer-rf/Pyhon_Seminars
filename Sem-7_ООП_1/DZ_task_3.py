@@ -27,8 +27,7 @@ class Worker:
             self.name = name  
             self.surname = surname  
             self.position = position
-            self._incom = _incom  
-
+            self._incom = _incom
 
 class Position(Worker):
 
