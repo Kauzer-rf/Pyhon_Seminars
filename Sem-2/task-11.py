@@ -3,8 +3,10 @@
 n = int(input('Введите число N: '))
 n_2 = 1
 for i in range(n):
- print(n_2, end=', ')
- n_2 *= -3
+    print(n_2, end=', ')
+    n_2 *= -3
 
 # Сахарный метод. Быстрое задание функций и переменных
+# n = int(input('Введите число N: '))
 # n = [(-3)**i for i in range(n)]
+# print(n)
