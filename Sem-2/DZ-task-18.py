@@ -24,7 +24,7 @@ def cls():
     os.system('cls'if os.name == 'nt' else 'clear')
 cls()
 
-n = int(input('Enter razmer spiska: '))
+n = int(input('Введите размер списка: '))
 default_list = list([random.randint(10, 99) for i in range(0, n)])
 print(f'Список до перемешиваения: \t{default_list}')
 random.shuffle(default_list)
