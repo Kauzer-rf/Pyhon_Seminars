@@ -6,34 +6,35 @@ def cls():
     os.system('cls'if os.name == 'nt' else 'clear')
 cls()
 
-def select_index(a):
-    not_even = []
-    if len(a) >= 2:
-        for i in range(1, len(a), 2):
-            not_even.append(a[i])
-        return not_even
-    else:
-        print('В списке всего одно значение! ')
+# Решение 1
+# def select_index(a):
+#     not_even = []
+#     if len(a) >= 2:
+#         for i in range(1, len(a), 2):
+#             not_even.append(a[i])
+#         return not_even
+#     else:
+#         print('В списке всего одно значение! ')
 
 
-def get_sum(a):
-    sum_ = 0
-    for i in a:
-        sum_ += i
-    return sum_
+# def get_sum(a):
+#     sum_ = 0
+#     for i in a:
+#         sum_ += i
+#     return sum_
 
 
-list_ = [2, 3, 5, 9, 3]
-print(f' На нечётных позициях элементы {select_index(list_)}')
-print(f' Сумма нечётных элементов: {get_sum(select_index(list_))}')
+# list_ = [2, 3, 5, 9, 3]
+# print(f' На нечётных позициях элементы {select_index(list_)}')
+# print(f' Сумма нечётных элементов: {get_sum(select_index(list_))}')
 
-# 2nd way
+# Решение 2
 # spisok = [2, 3, 5, 9, 3]
 # sum = 0
 # for i in range(1,len(spisok,2)):
 #     sum +=spisok[i]
 # print(sum)
 
-# 3rd way
-# list=[2,3,5,9,3][1::2]
-# print(sum(list))
+# Решение 3
+list=[2,3,5,9,3][1::2]
+print(sum(list))
