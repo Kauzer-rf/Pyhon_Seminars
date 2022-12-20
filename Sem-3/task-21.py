@@ -6,17 +6,18 @@
 # •	список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
 # •	список: [], ищем: "123", ответ: -1
 
-
 find = 'qwe'
 my_list = ["qwe", "asd", "zxc", "qwe", "ertqwe"]
 
+
 def second_in(list, find):
     count = 0
-    for i in range (len(list)):
+    for i in range(len(list)):
         if list[i] == find:
-            count +=1
+            count += 1
             if count == 2:
                 return i
     return -1
 
-print(second_in(my_list, find))
+
+print(f'Номер индекса 2-ого вхождения: {second_in(my_list, find)}')
