@@ -6,7 +6,7 @@ def cls():
     os.system('cls'if os.name == 'nt' else 'clear')
 cls()
 
-# Решение 1
+# _____Решение 1_____
 # def select_index(a):
 #     not_even = []
 #     if len(a) >= 2:
@@ -28,13 +28,13 @@ cls()
 # print(f' На нечётных позициях элементы {select_index(list_)}')
 # print(f' Сумма нечётных элементов: {get_sum(select_index(list_))}')
 
-# Решение 2
+# _____Решение 2_____
 # spisok = [2, 3, 5, 9, 3]
 # sum = 0
 # for i in range(1,len(spisok,2)):
 #     sum +=spisok[i]
 # print(sum)
 
-# Решение 3
+# _____Решение 3_____
 list=[2,3,5,9,3][1::2]
 print(sum(list))
