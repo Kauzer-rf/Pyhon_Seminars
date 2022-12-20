@@ -9,6 +9,7 @@ def cls():
     os.system('cls'if os.name == 'nt' else 'clear')
 cls()
 
+# Вариант решения 1
 # def get_number(a: int):
 #     list_ = []
 #     while a >= 1:
@@ -24,6 +25,6 @@ cls()
 # num = int(input('Введите целое число: '))
 # print('Двоичное число =>',get_number(num))
 
-# 2nd way
+# Вариант решения 2
 a = int(input('Enter number: '))
 print(bin(a)[2:])
