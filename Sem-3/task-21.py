@@ -21,3 +21,18 @@ def second_in(list, find):
 
 
 print(f'Номер индекса 2-ого вхождения: {second_in(my_list, find)}')
+
+# Решение 2
+# my_list = ["йцу", "фыв", "ячс", "цук", "йцукен", "йцу"]
+# print(my_list)
+
+# string_find = "йцу"
+# count = 0
+# for i in range(len(my_list)):
+#     if string_find == my_list[i]:
+#         count += 1
+#         if count == 2:
+#             print(i)
+#             break
+# else:
+#     print(-1)
