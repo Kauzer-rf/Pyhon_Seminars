@@ -13,7 +13,7 @@ def cls():
 
 cls()
 
-
+# Вариант решения 1
 # def sort_fractional_part(a: List):
 #     for i in range(len(a)):
 #         if type(a[i]) == float:
@@ -45,18 +45,7 @@ cls()
 #     f'Разница между максимальным и минимальным значением дробной части элементов => {get_difference_max_min_fractional(sort_fractional_part(list_))}')
 
 
-# 2nd way (error)
-# nums = [1.1, 1.2, 3.1, 5, 10.01]
-# for i in range(len(nums)):
-#     nums[i] = nums[i] - round(nums[i])
-# if 0 in nums:
-#     nums.remove(0)
-# print(
-#     f'Разница между максимальным и минимальным значением дробной части элементов => {round(max(nums) - min(nums), 2)}')
-
-
-# 3rd way (correct)
-
+# Вариант решения 2
 a = [1.1, 1.2, 3.1, 5, 10.01]
 b = []
 for i in a:
