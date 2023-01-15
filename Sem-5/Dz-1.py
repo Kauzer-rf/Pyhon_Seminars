@@ -9,5 +9,5 @@
 
 # Решение_2
 my_text = 'Прочитал абв новости абв и абв удивился.'
-new_text = ' '.join(list(filter(lambda elem: 'абв' not in elem.lower(), my_text.split())))
-print(new_text)
+find_text = ' '.join(list(filter(lambda elem: 'абв' not in elem.lower(), my_text.split())))
+print(find_text)
