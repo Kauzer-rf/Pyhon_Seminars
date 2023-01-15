@@ -84,19 +84,19 @@ while True: # Проверка событий и отрисовка поля 3х
         game_over = check_win(mas, 'o') #Победил игрок O. Нажмите пробел для рестарта
         
     if game_over:
-        screen.fill(black) # задаем шрифт и его ширину
-        font = pygame.font.SysFont('stxingkai', 200) # шрифт содержит текст game_over
+        screen.fill(black) # заливаем экран черным
+        font = pygame.font.SysFont('stxingkai', 200) # задаем шрифт и его ширину, текст game_over
         text1 = font.render(game_over, True, white)
         text_rect = text1.get_rect()  # узнаем его координаты
         text_x = screen.get_width() / 2 - text_rect.width / 2  # нахождение центра экрана
         text_y = screen.get_height() / 2 - text_rect.height / 2  
         screen.blit(text1, [text_x, text_y]) # прикрепление текста по найденным координатам
         
-        font = pygame.font.SysFont('stxingkai', 22) # шрифт содержит текст game_over
+        font = pygame.font.SysFont('stxingkai', 22) 
         text2 = font.render('Игра окончена, нажмите пробел для рестарта.', True, white)
-        text2_rect = text2.get_rect()  # узнаем его координаты
-        text2_x = screen.get_width() / 3 - text2_rect.width / 3  # нахождение центра экрана
+        text2_rect = text2.get_rect() 
+        text2_x = screen.get_width() / 3 - text2_rect.width / 3  
         text2_y = screen.get_height() / 3 - text2_rect.height / 3  
-        screen.blit(text2, [text2_x, text2_y]) # прикрепление текста по найденным координатам
+        screen.blit(text2, [text2_x, text2_y])
         
     pygame.display.update()
