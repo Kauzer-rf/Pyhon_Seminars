@@ -11,6 +11,7 @@
 #             my_new_list.append(my_list[j])
 # print(my_new_list) 
 
+# Решение 2 (без повторов)
 my_list = [1, 2, 3, 5, 1, 5, 3, 10]
 print(my_list)
 
