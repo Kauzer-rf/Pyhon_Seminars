@@ -26,13 +26,13 @@ print(parse)
 while '*' in parse or '/' in parse:
     for i in range(1, len(parse) - 1):
         if parse[i] == '*':
+            oper2 = parse.pop(i + 1)
             oper1 = parse.pop(i - 1)
-            oper2 = parse.pop(i)
             parse[i-1] = oper1 * oper2
             break
         elif parse[i] == '/':
+            oper2 = parse.pop(i + 1)
             oper1 = parse.pop(i - 1)
-            oper2 = parse.pop(i)
             parse[i-1] = int(oper1 / oper2)
             break
 print(parse)         
