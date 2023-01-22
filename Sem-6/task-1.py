@@ -33,7 +33,7 @@ while '*' in parse or '/' in parse:
         elif parse[i] == '/':
             oper1 = parse.pop(i - 1)
             oper2 = parse.pop(i)
-            parse[i-1] = oper1 / oper2
+            parse[i-1] = int(oper1 / oper2)
             break
 print(parse)         
 
