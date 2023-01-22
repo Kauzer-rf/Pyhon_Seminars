@@ -36,11 +36,6 @@ while '*' in parse or '/' in parse:
             break
 print(parse)         
 
-# for i, elem in range(1, len(parse)-1):
-#     if parse[i] == '*' or parse[i] == '/':
-#         operand1 = parse[i-1]
-#         operand2 = parse[i+1]
-#         print(operand1)
-#         print(operand2)
+
 
 
