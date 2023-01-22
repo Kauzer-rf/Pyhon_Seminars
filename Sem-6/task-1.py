@@ -22,8 +22,9 @@ for sym in user_input:
 parse.append(int(num_str))
 print(parse)
 
+# Умножение и деление.
 while '*' in parse or '/' in parse:
-    for i in range(1, len(parse) -1 ):
+    for i in range(1, len(parse) - 1):
         if parse[i] == '*':
             oper1 = parse.pop(i - 1)
             oper2 = parse.pop(i)
