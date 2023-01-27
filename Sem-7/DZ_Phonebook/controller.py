@@ -1,35 +1,43 @@
 import view
 import functions
 
+
 def Start():
-    current_phonebook = functions.GetData('Sem-7\DZ_Phonebook\PBData.txt')
+    current_phonebook = functions.GetDataFromColumns('PBData.txt')
     stop = False
 
     while not stop:
         user_choice = view.GetUserChoice()
 
+        # 1 = Add new phone
         if user_choice == '1':
             new_phone = view.GetNewPhone()
             functions.MatchingNumbers(current_phonebook, new_phone)
+
+            # 2 = Import
         elif user_choice == '2':
             path = view.GetFilePath()
-
-            if view.GetDataType('import') -1:
-                new_phones = functions.GetDataFromColumns(path)
-            else:
+                    # 2 = Rows format
+            if int(view.GetDataType('import')) - 1:
                 new_phones = functions.GetDataFromRows(path)
+            else: # 1 = Column format
+                new_phones = functions.GetDataFromColumns(path)
             functions.MatchingNumbers(current_phonebook, new_phones)
 
+            # 3 = Export
         elif user_choice == '3':
             path = view.GetFilePath()
 
-            if view.GetExportFileType() - 1:
-                if view.GetDataType() - 1:
-                    functions.ExportContaactsInTXTColumns(path, current_phonebook)
+                   # 1 = *.csv   2 = *.txt
+            if int(view.GetExportFileType()) - 1:
+                if int(view.GetDataType('export')) - 1:
+                    functions.ExportContactsInTXTColumns(path, current_phonebook)
                 else:
                     functions.ExportContactsInCSV(path, '\contacts.txt', current_phonebook)
+                    
             else:
                 functions.ExportContactsInCSV(path, '\contacts.csv', current_phonebook)
-        else:
-            stop = False
-    functions.SaveData(current_phonebook)        
+        else: # 4 = Exit
+            stop = True
+
+    functions.SaveData(current_phonebook)
