@@ -25,7 +25,7 @@ def GetDataType(message):
     print('   Phone_1')
     print('   Description_1')
     print()
-    print('2. Last_name_2')
+    print('   Last_name_2')
     print('   First_Name_2')
     print('   Phone_2')
     print('   Description_2')
