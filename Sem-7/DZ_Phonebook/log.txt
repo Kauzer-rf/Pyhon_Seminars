@@ -1,4 +1,0 @@
-f{time} - {message}
-f{time} - {message}
-f{time} - {message}
-f{time} - {message}

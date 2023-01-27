@@ -1,2 +1,0 @@
-Fedotov;Andrei;8888;eng
-Ivanov;Ivan;9999;mech
