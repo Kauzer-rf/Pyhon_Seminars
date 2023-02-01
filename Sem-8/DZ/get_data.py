@@ -2,7 +2,7 @@ import logger
 
 
 def get_last_student_id():
-    with open('Homework\Homework_027\school\last_student_id.txt', 'r',encoding='utf-8') as file:
+    with open('last_student_id.txt', 'r',encoding='utf-8') as file:
         logger.log('Last student`s id succsessfully copied.')
         return int(file.read())
 
@@ -14,7 +14,7 @@ def get_new_id(student_id_counter):
 def get_classes():
     classes = dict()
 
-    with open('Homework\Homework_027\school\classes.txt', 'r',encoding='utf-8') as file:
+    with open('classes.txt', 'r',encoding='utf-8') as file:
         temp = file.readlines()
 
         for element in temp:
@@ -26,7 +26,7 @@ def get_classes():
 def get_all_students():
     students = dict()
 
-    with open('Homework\Homework_027\school\students.csv', 'r',encoding='utf-8') as file:
+    with open('students.csv', 'r',encoding='utf-8') as file:
         temp = file.readlines()
         temp.pop(0)
         # print(temp)
