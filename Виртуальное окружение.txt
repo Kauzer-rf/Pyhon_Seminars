@@ -1,0 +1,10 @@
+python -m venv nvew_venv -- создать вирутальное окружение (винда)
+source venv/bin/activate -- linux
+
+venv\scripits\activate -- активация на винде (слеш обязательно обратный)
+deactivate -- деактивация ВО 
+
+pip freeze -- установленные пакеты, создает файл зависимостей
+pip freeze > requirements.txt - создает файл зависимостей
+pip install -r requirements.txt -- ставит все пакет из файлика
+pip uninstall -y -r requirements.txt -- удаляет все пакеты, которые указаны в файлике 
